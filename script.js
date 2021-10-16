@@ -4,9 +4,9 @@ var dateEl = $('#currentDay');
 
 
 // Display current date
-dateEl.text(moment().format("dddd MMMM DD, YYYY"))
+dateEl.text(moment().format("dddd MMMM DD, YYYY h:mm a"))
 var date = setInterval(() => {
-  dateEl.text(moment().format("dddd MMMM DD, YYYY"))
+  dateEl.text(moment().format("dddd MMMM DD, YYYY h:mm a"))
 },1000)
 
 // Timeblocks
@@ -17,7 +17,8 @@ function hourTrack(){
   
   $(".time-block").each(function(){
     var hourColor = parseInt($(this).attr("id").split("hour"));
-    console.log (hourColor)
+    console.log(hourColor)
+    console.log(hourColor["hour-8am"])
 
     if(currentHour > hourColor){
       $(this).removeClass("present");
