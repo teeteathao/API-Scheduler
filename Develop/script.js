@@ -15,17 +15,19 @@ function hourTrack(){
   var currentHour = moment().hour();
     console.log(currentHour);
   
-  $(".row").each(function(){
-    var hourColor =parseInt($(this).attr("id"))
-    console.log (hourColor, currentHour)
+  $(".time-block").each(function(){
+    var hourColor = parseInt($(this).attr("id").split("hour"));
+    console.log (hourColor)
 
     if(currentHour > hourColor){
+      $(this).removeClass("present");
+      $(this).removeClass("future");
       $(this).addClass("past");
     }
     else if(currentHour === hourColor){
       $(this).removeClass("past");
-      $(this).addClass("present"); 
       $(this).removeClass("future");
+      $(this).addClass("present"); 
     }
     else{
       $(this).removeClass("past");
@@ -34,7 +36,7 @@ function hourTrack(){
     }
   })
 }
-hourTrack()
+hourTrack();
 
 
 // Add eventlistener to saveBtn
