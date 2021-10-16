@@ -16,14 +16,14 @@ function hourTrack(){
     console.log(currentHour);
   
   $(".time-block").each(function(){
-    var hourColor = parseInt($(this).attr("id").split("hour"));
+    var hourColor = parseInt($(this).attr("id").split("hour")[1]);
+    var hourColor = $(this).attr("id").split("hour");
     console.log(hourColor)
-    console.log(hourColor["hour-8am"])
 
     if(currentHour > hourColor){
+      $(this).addClass("past");
       $(this).removeClass("present");
       $(this).removeClass("future");
-      $(this).addClass("past");
     }
     else if(currentHour === hourColor){
       $(this).removeClass("past");
