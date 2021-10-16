@@ -16,10 +16,10 @@ function hourTrack(){
     console.log(currentHour);
   
   $(".time-block").each(function(){
-    var hourColor = parseInt($(this).attr("id").split("hour")[1]);
-    var hourColor = $(this).attr("id").split("hour");
+    var hourColor = parseInt($(this).attr("id").split("hour-")[1]);
     console.log(hourColor)
-
+    console.log(`currentHour: ${currentHour}  hourColor:${hourColor}`)
+    
     if(currentHour > hourColor){
       $(this).addClass("past");
       $(this).removeClass("present");
