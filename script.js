@@ -9,6 +9,8 @@ var date = setInterval(() => {
   dateEl.text(moment().format("dddd MMMM DD, YYYY h:mm a"))
 },1000)
 
+
+
 // Timeblocks
 // create function that checks the current time to see past, present, future
 function hourTrack(){
@@ -19,7 +21,7 @@ function hourTrack(){
     var hourColor = parseInt($(this).attr("id").split("hour-")[1]);
     console.log(hourColor)
     console.log(`currentHour: ${currentHour}  hourColor:${hourColor}`)
-    
+
     if(currentHour > hourColor){
       $(this).addClass("past");
       $(this).removeClass("present");
@@ -56,21 +58,16 @@ $(".saveBtn").on("click", function(){
 
 // get item = persist to keep item on the page when refreshed
 
-$("#hour-8am .userInput").val(localStorage.getItem("hour-8am"));
-$("#hour-9am .userInput").val(localStorage.getItem("hour-9am"));
-$("#hour-10am .userInput").val(localStorage.getItem("hour-10am"));
-$("#hour-11am .userInput").val(localStorage.getItem("hour-11am"));
-$("#hour-12pm .userInput").val(localStorage.getItem("hour-12pm"));
-$("#hour-1pm .userInput").val(localStorage.getItem("hour-1pm"));
-$("#hour-2pm .userInput").val(localStorage.getItem("hour-2pm"));
-$("#hour-3pm .userInput").val(localStorage.getItem("hour-3pm"));
-$("#hour-4pm .userInput").val(localStorage.getItem("hour-4pm"));
-$("#hour-5pm .userInput").val(localStorage.getItem("hour-5pm"));
-
-
-
-
-
+$("#hour-8 .userInput").val(localStorage.getItem("hour-8"));
+$("#hour-9 .userInput").val(localStorage.getItem("hour-9"));
+$("#hour-10 .userInput").val(localStorage.getItem("hour-10"));
+$("#hour-11 .userInput").val(localStorage.getItem("hour-11"));
+$("#hour-12 .userInput").val(localStorage.getItem("hour-12"));
+$("#hour-13 .userInput").val(localStorage.getItem("hour-13"));
+$("#hour-14 .userInput").val(localStorage.getItem("hour-14"));
+$("#hour-15 .userInput").val(localStorage.getItem("hour-15"));
+$("#hour-16 .userInput").val(localStorage.getItem("hour-16"));
+$("#hour-17 .userInput").val(localStorage.getItem("hour-17"));
 
 
 })
