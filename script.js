@@ -53,7 +53,7 @@ $(".saveBtn").on("click", function(){
   var timeBlock = $(this).parent().attr("id");
   console.log(typeof timeBlock)
   // save to local storage
-  localStorage.setItem(userInput, timeBlock)
+  localStorage.setItem(timeBlock, userInput)
 })
 
 // get item = persist to keep item on the page when refreshed
